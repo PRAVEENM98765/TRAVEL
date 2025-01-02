@@ -18,11 +18,13 @@
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
+  
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start , node app.js",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test ,echo \"Error: no test specified\" && exit 1",
     "eject": "react-scripts eject"
+    
   },
   "eslintConfig": {
     "extends": [
@@ -45,4 +47,5 @@
   "devDependencies": {
     "tailwindcss": "^3.4.10"
   }
+  
 }
