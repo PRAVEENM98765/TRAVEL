@@ -86,17 +86,17 @@ const Contact = () => {
   return (
     <div className="flex flex-col lg:flex-row  items-center justify-center p-5 gap-5 bg-gradient-to-b from-white to-blue-200">
       {/* Left Section (Map and Store Information) */}
-      <div className="lg:w-1/2 w-full flex flex-col items-center mb-8 lg:mb-0">
-        <div className="w-full h-80 md:h-80 lg:w-[475px] lg:h-[450px] xl:w-[900px] xl:h-[450px] object-cover">
-          <iframe
-         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15633.804777575517!2d78.14269516133062!3d11.591146787968663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef06ff916357%3A0x6581fffd62d10d62!2sGajjalnaickenpatti%2C%20Salem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1733296525013!5m2!1sen!2sin"         
-            height="100%"
-            width='100%'
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+      <div className="w-full flex flex-col items-center mb-8 lg:mb-0 ">
+  <div className="w-full h-60 sm:h-72 md:h-80 lg:w-3/4 lg:h-[450px] xl:w-[1200px] xl:h-[500px] object-cover ">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15633.804777575517!2d78.14269516133062!3d11.591146787968663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef06ff916357%3A0x6581fffd62d10d62!2sGajjalnaickenpatti%2C%20Salem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1733296525013!5m2!1sen!2sin"
+      className="w-full h-full"
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
         <div className="bg-blue-300 text-white w-full shadow-lg p-5 mt-4 lg:mt-0">
           <h3 className="text-xl font-semibold mb-3 text-center">Location </h3>
           <p className="text-center">1/23, Red street ,salem-636201.</p>
@@ -122,7 +122,7 @@ const Contact = () => {
             Contact Us
           </h1>
         </div>
-        <div className="p-5 bg-white rounded-lg shadow-lg">
+        <div className="p-5 bg-white rounded-lg shadow-lg ">
           <h2 className="text-2xl font-semibold mb-4 text-center">Get in Touch with Us</h2>
           <p className="text-center text-gray-600 mb-6">
             Have questions or inquiries about our exclusive menswear collections? Let us know!
