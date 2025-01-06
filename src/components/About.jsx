@@ -1,6 +1,5 @@
 import React from 'react';
 import bg from './Assetes/P 2.png';
-import aboutimg from './Assetes/about.avif'
 import group from './Assetes/group.jpg'
 const About = () => {
 
