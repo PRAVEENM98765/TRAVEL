@@ -37,7 +37,6 @@ function App() {
      <Route path='/destine'element={<Destination/>  }/>
      <Route path='/login'element={<Login/>  }/>
      <Route path='/package1'element={<Packagepage/>  }/>
-     <Route path='/home'element={<Home/>}/>
      <Route path='/contact'element={<Contact/>}/>
      <Route path='/about'element={<About/>}/>
      <Route path='/booknow'element={<BookNow/>}/>

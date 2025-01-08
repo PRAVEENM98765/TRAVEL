@@ -2,7 +2,7 @@ import React from "react";
 
 import video from './Usa.mp4'
 // Highlight image for USA
- import highlightUSA from './USAhighlight.webp';
+import highlightUSA from './USAhighlight.webp';
 
 // Day images for the USA itinerary
 import usaday1 from './usaday1.jpg';
@@ -11,6 +11,7 @@ import usaday3 from './usaday3.jpg';
 import usaday4 from './Usaday4.jpg';
 import usaday5 from './usaday5.jpg';
 import usaday6 from './usaday6.jpg';
+import { Link } from "react-router-dom";
 
 const USA = () => {
   const itinerary = [
@@ -82,31 +83,31 @@ const USA = () => {
       <div className="relative text-gray-800">
         {/* YouTube Background */}
         <video
-          className="absolute top-0 left-0 w-full h-[60vh] object-cover rounded-3xl"
-          src={video}
+         className="absolute top-0 left-0 w-full h-[40vh] sm:h-[40vh] lg:h-[70vh] object-cover rounded-xl"
+         src={video}
           autoPlay
           loop
           muted
           playsInline
         />
         {/* Overlay Content */}
-        <div className="relative p-44 bg-black bg-opacity-10 text-white">
+        <div className="relative p-10 md:p-20 lg:p-44  text-white">
           <div className="text-center mb-10">
-            <h1 className="text-8xl font-bold text-blue-200">USA Travel Package</h1>
-            <p className="text-6xl mt-4">Explore the Land of Opportunities.</p>
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-blue-200">USA Travel Package</h1>
+            <p className="text-xl sm:text-3xl md:text-6xl mt-4">Explore the Land of Opportunities.</p>
           </div>
         </div>
 
         {/* Highlights Section */}
-        <section className="p-8 bg-gray-200 flex flex-col items-center text-center">
-          <h2 className="text-4xl font-semibold mb-4">Highlights</h2>
-          <ul className="list-disc pl-5 space-y-2 text-xl text-left">
+        <section className="sm:mt-5 md:mt-20 lg:mt-20 p-6 sm:p-8 lg:p-10 bg-gray-200 rounded-xl shadow-lg max-w-full md:max-w-5xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">Highlights</h2>
+          <ul className="list-disc pl-5 space-y-2 text-lg sm:text-xl md:text-xl text-left">
             <li>Duration: 6 Nights / 7 Days</li>
             <li>Destinations: New York City, Washington D.C., Niagara Falls, Las Vegas, Grand Canyon, Los Angeles, San Francisco</li>
             <li>Type: Luxury, Adventure, Family, Honeymoon</li>
           </ul>
           <img
-            className="w-[100vh] h-[50vh] mt-5 rounded-3xl shadow-lg"
+            className="w-full md:w-[70vw] h-[30vh] sm:h-[40vh] md:h-[50vh] mt-5 rounded-3xl shadow-lg"
             src={highlightUSA}
             alt="USA Highlights"
           />
@@ -115,24 +116,24 @@ const USA = () => {
 
       {/* Itinerary Section */}
       <div className="space-y-6 justify-center">
-        <h2 className="text-6xl font-bold text-blue-500">Itinerary</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-blue-500">Itinerary</h2>
         {itinerary.map((item, index) => (
           <div
             key={index}
             className="flex flex-col md:flex-row justify-center items-center gap-6 bg-white shadow-md rounded-md p-4 "
           >
             <div className="md:w-2/4">
-              <h3 className="text-4xl font-semibold text-blue-500">{item.day}</h3>
-              <li className="mt-2 text-2xl text-gray-600">{item.details}</li>
-              <li className="mt-2 text-2xl text-gray-600">{item.details1}</li>
-              <li className="mt-2 text-2xl text-gray-600">{item.details2}</li>
-              <li className="mt-2 text-2xl text-gray-600">{item.details3}</li>
+              <h3 className="text-3xl sm:text-4xl font-semibold text-blue-500">{item.day}</h3>
+              <li className="mt-2 text-lg sm:text-xl md:text-2xl text-gray-600">{item.details}</li>
+              <li className="mt-2 text-lg sm:text-xl md:text-2xl text-gray-600">{item.details1}</li>
+              <li className="mt-2 text-lg sm:text-xl md:text-2xl text-gray-600">{item.details2}</li>
+              <li className="mt-2 text-lg sm:text-xl md:text-2xl text-gray-600">{item.details3}</li>
             </div>
             <div className="md:w-2/4">
               <img
                 src={item.image}
                 alt={`${item.day}`}
-                className="rounded-md object-cover w-full h-[40vh]"
+                className="rounded-md object-cover w-full h-[30vh] sm:h-[40vh] md:h-[50vh]"
               />
             </div>
           </div>
@@ -141,31 +142,33 @@ const USA = () => {
 
       {/* Pricing Section */}
       <div className="mt-10">
-        <h2 className="text-2xl font-bold text-blue-500">Pricing</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-500">Pricing</h2>
         <div className="mt-4 space-y-4">
           {pricingDetails.map((item, index) => (
             <div
               key={index}
               className="flex justify-between items-center bg-white p-4 shadow-md rounded-md"
             >
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base md:text-xl">
                 <span className="font-semibold">{item.type}:</span> {item.price}
               </p>
-              <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                Book Now
-              </button>
+              <Link to="/booking" state={{ product: item }}>
+                <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                  Book Now
+                </button>
+              </Link>
             </div>
           ))}
         </div>
-        <p className="text-sm text-gray-500 mt-2">
+        <p className="text-xs sm:text-sm md:text-base text-gray-500 mt-2">
           * Prices may vary based on travel dates and customization requests.
         </p>
       </div>
 
       {/* Add-Ons Section */}
       <div className="mt-10">
-        <h2 className="text-2xl font-bold text-blue-500">Add-Ons</h2>
-        <ul className="mt-4 space-y-2 text-gray-600">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-500">Add-Ons</h2>
+        <ul className="mt-4 space-y-2 text-gray-600 text-sm sm:text-base md:text-xl">
           {addOns.map((item, index) => (
             <li key={index}>✨ {item.title} ({item.price})</li>
           ))}
@@ -174,8 +177,8 @@ const USA = () => {
 
       {/* Why Choose Us Section */}
       <div className="mt-10">
-        <h2 className="text-2xl font-bold text-blue-500">Why Choose Us?</h2>
-        <ul className="mt-4 space-y-2 text-gray-600">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-500">Why Choose Us?</h2>
+        <ul className="mt-4 space-y-2 text-gray-600 text-sm sm:text-base md:text-xl">
           <li>🌟 Tailored luxury experiences</li>
           <li>🌟 Trusted local partnerships for authentic American adventures</li>
           <li>🌟 24/7 support during your trip</li>

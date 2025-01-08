@@ -8,29 +8,40 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className=" bg-gray-100  " >
+    <header className="bg-gray-100 shadow-md">
       <div className="container mx-auto flex flex-wrap items-center justify-between p-5">
         {/* Logo Section */}
         <div className="flex items-center text-black">
-         
           <h1 className="font-semibold text-2xl ml-2">Travel App</h1>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex space-x-8 font-semibold text-black">
-          <a href="Home" className="flex items-center space-x-2 hover:text-gray-300">
+          <a
+            href="/"
+            className="flex items-center space-x-2 hover:text-gray-500 transition-colors"
+          >
             <FaHome size={20} />
             <span>Home</span>
           </a>
-          <a href="/about" className="flex items-center space-x-2 hover:text-gray-300">
+          <a
+            href="/about"
+            className="flex items-center space-x-2 hover:text-gray-500 transition-colors"
+          >
             <FaBook size={20} />
             <span>About</span>
           </a>
-          <a href="/contact" className="flex items-center space-x-2 hover:text-gray-300">
+          <a
+            href="/contact"
+            className="flex items-center space-x-2 hover:text-gray-500 transition-colors"
+          >
             <BsPeopleFill size={20} />
             <span>Contact</span>
           </a>
-          <a href="/destine" className="flex items-center space-x-2 hover:text-gray-300">
+          <a
+            href="/destine"
+            className="flex items-center space-x-2 hover:text-gray-500 transition-colors"
+          >
             <BiSolidPlaneAlt size={20} />
             <span>Destination</span>
           </a>
@@ -38,10 +49,10 @@ const Navbar = () => {
 
         {/* Login/Signup Section */}
         <div className="hidden lg:flex">
-          <button className="px-4 py-1 bg-white rounded-full font-semibold text-black hover:bg-gray-200">
-            <a href="/Login">Login</a>
+          <button className="px-4 py-1 bg-white rounded-full font-semibold text-black hover:bg-gray-200 transition-colors">
+            <a href="/login">Login</a>
             <span> | </span>
-            <a href="/Signup">Sign up</a>
+            <a href="/signup">Sign up</a>
           </button>
         </div>
 
@@ -49,7 +60,7 @@ const Navbar = () => {
         <div className="lg:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-white focus:outline-none"
+            className="text-black focus:outline-none"
           >
             ☰
           </button>
@@ -59,26 +70,38 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <nav className="lg:hidden bg-black bg-opacity-75 text-white p-5 space-y-4">
-          <a href="/home" className=" flex items-center space-x-2 hover:text-gray-300">
+          <a
+            href="/"
+            className="flex items-center space-x-2 hover:text-gray-300 transition-colors"
+          >
             <FaHome size={20} />
             <span>Home</span>
           </a>
-          <a href="/about" className=" flex items-center space-x-2 hover:text-gray-300">
+          <a
+            href="/about"
+            className="flex items-center space-x-2 hover:text-gray-300 transition-colors"
+          >
             <FaBook size={20} />
             <span>About</span>
           </a>
-          <a href="/contact" className=" flex items-center space-x-2 hover:text-gray-300">
+          <a
+            href="/contact"
+            className="flex items-center space-x-2 hover:text-gray-300 transition-colors"
+          >
             <BsPeopleFill size={20} />
             <span>Contact</span>
           </a>
-          <a href="/destine" className=" flex items-center space-x-2 hover:text-gray-300">
+          <a
+            href="/destine"
+            className="flex items-center space-x-2 hover:text-gray-300 transition-colors"
+          >
             <BiSolidPlaneAlt size={20} />
             <span>Destination</span>
           </a>
-          <button className="w-full px-4 py-2 bg-white rounded-full font-semibold text-black hover:bg-gray-200">
-            <a href="/Login">Login</a>
+          <button className="w-full px-4 py-2 bg-white rounded-full font-semibold text-black hover:bg-gray-200 transition-colors">
+            <a href="/login">Login</a>
             <span> | </span>
-            <a href="/Signup">Sign up</a>
+            <a href="/signup">Sign up</a>
           </button>
         </nav>
       )}
