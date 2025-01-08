@@ -89,12 +89,14 @@ const Contact = () => {
       <div className="w-full flex flex-col items-center mb-8 lg:mb-0 ">
   <div className="w-full h-60 sm:h-72 md:h-80 lg:w-3/4 lg:h-[450px] xl:w-[1200px] xl:h-[500px] object-cover ">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15633.804777575517!2d78.14269516133062!3d11.591146787968663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef06ff916357%3A0x6581fffd62d10d62!2sGajjalnaickenpatti%2C%20Salem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1733296525013!5m2!1sen!2sin"
-      className="w-full h-full"
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15633.804777575517!2d78.14269516133062!3d11.591146787968663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babef06ff916357%3A0x6581fffd62d10d62!2sGajjalnaickenpatti%2C%20Salem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1733296525013!5m2!1sen!2sin"
+  height="100%"
+  width="100%"
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Google Maps of Gajjalnaickenpatti, Salem, Tamil Nadu"
+></iframe>
   </div>
 
         <div className="bg-blue-300 text-white w-full shadow-lg p-5 mt-4 lg:mt-0">

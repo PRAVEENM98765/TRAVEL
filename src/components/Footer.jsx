@@ -51,7 +51,7 @@ const Footer = () => {
             <h2 className="font-semibold">Email : praveenmohan3010@gmail.com </h2>
             </li>
             <li>Phone:
-              <a href="">+91 95006 05076</a>
+              <a href="https://www.instagram.com/yaazhtechsoftware ">+91 95006 05076</a>
             </li>
             <li>Tell: +04298278160</li>
           </ul>
